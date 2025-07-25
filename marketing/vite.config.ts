@@ -7,10 +7,10 @@ export default defineConfig({
   plugins: [
     react(),
     federation({
-      name: "host_app",
-      remotes: {
-        marketing: "http://localhost:5001/assets/remoteEntry.js",
-        "uk-kit": "http://localhost:5002/assets/remoteEntry.js",
+      name: "marketing",
+      filename: "remoteEntry.js",
+      exposes: {
+        "./Counter": "./src/components/Counter",
       },
       shared: ["react", "react-dom"],
     }),

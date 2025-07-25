@@ -1,9 +1,9 @@
 
-import "./Button.css"
+import "./Counter.css"
 
 import { useState } from "react"
 
-export const Button = () => {
+export const Counter = () => {
   const [state, setState] = useState(0)
   return (
     <div>
@@ -12,4 +12,4 @@ export const Button = () => {
   )
 }
 
-export default Button
+export default Counter

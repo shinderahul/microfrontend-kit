@@ -7,10 +7,11 @@ export default defineConfig({
   plugins: [
     react(),
     federation({
-      name: "host_app",
-      remotes: {
-        marketing: "http://localhost:5001/assets/remoteEntry.js",
-        "uk-kit": "http://localhost:5002/assets/remoteEntry.js",
+      name: "ui-kit",
+      filename: "remoteEntry.js",
+      exposes: {
+        "./Button": "./src/components/Button",
+        "./Card": "./src/components/Card",
       },
       shared: ["react", "react-dom"],
     }),
